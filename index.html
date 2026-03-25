@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arenja Premium - Carnes de Res</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+
+      <div class="logo">
+        <img src="logo Arenja.png" alt="Arenja Premium" class="logo-img">
+        <span class="logo-texto">Arenja <strong>Premium</strong></span>
+      </div>
+
+      <ul class="menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button class="btn-carrito" onclick="abrirCarrito()">
+        🛒 Cotizar
+        <span class="carrito-numero" id="carritoNumero"></span>
+      </button>
+
+      <button class="hamburguesa" onclick="toggleMenu()" id="btnHamburguesa">
+        ☰
+      </button>
+
+    </div>
+  </nav>
+
+
+  <section id="inicio" class="hero">
+
+    <div class="hero-fondo"></div>
+
+    <div class="hero-contenido">
+
+      <h1>La mejor <span>carne de res</span><br>en Colombia</h1>
+      <p>Distribución directa desde el frigorífico hasta su mesa.<br>Calidad garantizada y los mejores precios.<br><strong><em>"Calidad que se corta, Sabor que se siente."</em></strong></p>
+
+      <div class="hero-botones">
+        <a href="#productos" class="btn-dorado">Ver Productos</a>
+        <a href="#nosotros"  class="btn-borde">Quiénes Somos</a>
+      </div>
+
+    </div>
+
+    <div class="bajar">↓</div>
+
+  </section>
+
+
+  <section id="servicios" class="seccion fondo-oscuro">
+    <div class="contenedor">
+
+      <div class="titulo-seccion">
+        <p class="etiqueta">Lo que ofrecemos</p>
+        <h2>Nuestros <span>Servicios</span></h2>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="grid-4">
+
+        <div class="tarjeta-servicio">
+          <div class="icono-servicio">🏆</div>
+          <h3>Quiénes Somos</h3>
+          <p>Empresa colombiana que trabaja con ganaderos certificados para traerle la mejor carne.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+          <div class="icono-servicio">⚙️</div>
+          <h3>Qué Hacemos</h3>
+          <p>Seleccionamos, procesamos y distribuimos cortes de res de primera calidad para familias, restaurantes y empresas.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+          <div class="icono-servicio">🥩</div>
+          <h3>Nuestros Productos</h3>
+          <p>Lomo fino, Punta de anca, Costilla, Bife, Sobrebarriga y más. Frescos, seleccionados y con cadena de frío garantizada.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+          <div class="icono-servicio">📞</div>
+          <h3>Contacto Directo</h3>
+          <p>Atención por WhatsApp y teléfono. Cotizaciones inmediatas y entrega a domicilio en el área metropolitana.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="nosotros" class="seccion">
+    <div class="contenedor">
+
+      <div class="titulo-seccion">
+        <p class="etiqueta">Nuestra historia</p>
+        <h2>¿Quiénes <span>Somos</span>?</h2>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="nosotros-grid">
+
+        <div class="nosotros-imagen">
+          <div class="imagen-carne">
+            <span class="emoji-carne">🥩</span>
+            <p>2026</p>
+          </div>
+          <div class="estadisticas">
+            <div class="stat">
+              <strong>La mejor</strong>
+              <span>Carne</span>
+            </div>
+            <div class="stat">
+              <strong>500+</strong>
+              <span>Clientes</span>
+            </div>
+            <div class="stat">
+              <strong>50T</strong>
+              <span>Kg/mes</span>
+            </div>
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Calidad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nosotros-texto">
+          <h3>Tradición y calidad en cada <span>corte</span></h3>
+          <p>
+            En Arenja Premium somos apasionados por la carne de res de calidad.
+            Trabajamos directamente con ganaderos de las mejores regiones
+            ganaderas de Colombia para traerle los cortes más frescos y sabrosos.
+          </p>
+          <p>
+            Nuestro proceso incluye selección rigurosa del ganado, procesamiento en
+            frigoríficos certificados y distribución con cadena de frío hasta su mesa.
+          </p>
+
+          <ul class="lista-puntos">
+            <li>Ganado de razas premium (Angus, Brahman)</li>
+            <li>Certificación INVIMA en todos nuestros frigoríficos</li>
+            <li>Cadena de frío garantizada en la distribución</li>
+            <li>Entrega a domicilio en 24 a 48 horas</li>
+            <li>Cortes personalizados según su necesidad</li>
+            <li>Facturación electrónica — cumple normativa colombiana</li>
+          </ul>
+
+          <a href="#contacto" class="btn-dorado">Contáctenos</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="productos" class="seccion fondo-oscuro">
+    <div class="contenedor">
+
+      <div class="titulo-seccion">
+        <p class="etiqueta">Catálogo</p>
+        <h2>Nuestros <span>Productos</span></h2>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="grid-productos" id="gridProductos"></div>
+
+    </div>
+  </section>
+
+
+  <section id="precios" class="seccion">
+    <div class="contenedor">
+
+      <div class="titulo-seccion">
+        <p class="etiqueta">Tarifas</p>
+        <h2>Precios <span>por Kilogramo</span></h2>
+        <div class="linea-dorada"></div>
+        <p style="color: rgba(255,255,255,0.6); margin-top: 10px; font-size: 0.9rem;">
+          Precios en pesos colombianos (COP). A mayor cantidad, mejor precio.
+        </p>
+      </div>
+
+      <div class="tabla-scroll">
+        <table class="tabla-precios">
+          <thead>
+            <tr>
+              <th>Corte</th>
+              <th>1 a 4 kg</th>
+              <th>5 a 9 kg</th>
+              <th>10 a 24 kg</th>
+              <th>25 kg o más</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contacto" class="seccion fondo-oscuro">
+    <div class="contenedor">
+
+      <div class="titulo-seccion">
+        <p class="etiqueta">Escríbenos</p>
+        <h2>Póngase en <span>Contacto</span></h2>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="contacto-grid">
+
+        <div class="contacto-info">
+          <h3>Estamos listos para atenderle</h3>
+          <p>Comuníquese con nosotros para pedir cotización o hacer su pedido. Respondemos en menos de 2 horas.</p>
+
+          <div class="dato-contacto">
+            <span class="dato-icono">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p>Cra 15 #28-45, Bogotá D.C., Colombia</p>
+            </div>
+          </div>
+
+          <div class="dato-contacto">
+            <span class="dato-icono">📱</span>
+            <div>
+              <strong>WhatsApp / Teléfono</strong>
+              <p>+57 319 361 9999</p>
+            </div>
+          </div>
+
+          <div class="dato-contacto">
+            <span class="dato-icono">📧</span>
+            <div>
+              <strong>Correo</strong>
+              <p>emersonjara2001@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="dato-contacto">
+            <span class="dato-icono">🕐</span>
+            <div>
+              <strong>Horario</strong>
+              <p>Lunes a Sábado: 6:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573193619999?text=Hola,%20quiero%20cotizar%20productos%20de%20Arenja%20Premium"
+             target="_blank"
+             class="btn-whatsapp"
+             style="margin-top: 20px; display: inline-flex;">
+            💬 Chatear por WhatsApp
+          </a>
+        </div>
+
+        <div class="contacto-formulario">
+          <h3>Solicitar Cotización</h3>
+
+          <div class="campo">
+            <label>Nombre completo *</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan García">
+          </div>
+
+          <div class="campo">
+            <label>Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" placeholder="+57 300 000 0000">
+          </div>
+
+          <div class="campo">
+            <label>Correo electrónico</label>
+            <input type="email" id="correo" placeholder="su@correo.com">
+          </div>
+
+          <div class="campo">
+            <label>Tipo de cliente</label>
+            <select id="tipoCliente">
+              <option value="">Seleccione...</option>
+              <option>Persona natural</option>
+              <option>Restaurante / Hotel</option>
+              <option>Supermercado / Tienda</option>
+              <option>Empresa</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>¿Qué necesita?</label>
+            <textarea id="mensaje" placeholder="Cuéntenos qué cortes y cantidades necesita..." rows="4"></textarea>
+          </div>
+
+          <button class="btn-whatsapp" onclick="enviarFormulario()">
+            💬 Enviar por WhatsApp
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="contenedor">
+      <div class="footer-grid">
+
+        <div class="footer-marca">
+          <div class="logo" style="margin-bottom: 12px;">
+            <img src="logo Arenja.png" alt="Arenja Premium" class="logo-img">
+            <span class="logo-texto">Arenja <strong>Premium</strong></span>
+          </div>
+          <p>Distribución de carnes de res premium en Colombia. Calidad y frescura garantizadas.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="https://www.mintic.gov.co/portal/inicio/Secciones-auxiliares/Politicas/2627:Politicas-de-Privacidad-y-Condiciones-de-Uso">Política de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">Habeas Data</a></li>
+            <li><a href="https://www.invima.gov.co/consulta-registros-sanitarios">Registro INVIMA</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-fondo">
+        <p>© 2025 Arenja Premium S.A.S. · Bogotá, Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
+
+  <div class="panel-carrito" id="panelCarrito">
+
+    <div class="carrito-header">
+      <h3>🛒 Mi Cotización</h3>
+      <button onclick="cerrarCarrito()">✕</button>
+    </div>
+
+    <div class="carrito-lista" id="carritoLista">
+      <div class="carrito-vacio" id="carritoVacio">
+        <p>🥩</p>
+        <p>Tu cotización está vacía</p>
+        <small>Agrega productos para cotizar</small>
+      </div>
+    </div>
+
+    <div class="carrito-pie" id="carritoPie" style="display: none;">
+      <div class="carrito-total">
+        <span>Total estimado:</span>
+        <strong id="carritoTotal">$0</strong>
+      </div>
+      <button class="btn-whatsapp" onclick="enviarCarritoWhatsapp()">
+        💬 Enviar cotización por WhatsApp
+      </button>
+      <small class="nota-carrito">
+        * Cotización estimada. Un asesor confirmará los precios finales.
+      </small>
+    </div>
+
+  </div>
+
+
+  <div class="notificacion" id="notificacion">✅ Producto agregado</div>
+
+
+  <script src="JS/app.js"></script>
+
+</body>
+</html>
