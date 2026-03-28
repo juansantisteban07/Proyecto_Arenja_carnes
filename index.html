@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-
+ 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arenja Premium - Carnes de Res</title>
-
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+ 
   <link rel="stylesheet" href="CSS/styles.css">
 </head>
-
+ 
 <body>
-
+ 
   <nav id="navbar">
     <div class="nav-container">
-
+ 
       <div class="logo">
         <img src="logo Arenja.png" alt="Arenja Premium" class="logo-img">
         <span class="logo-texto">Arenja <strong>Premium</strong></span>
       </div>
-
+ 
       <ul class="menu" id="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
@@ -29,92 +29,171 @@
         <li><a href="#precios">Precios</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-
+ 
       <button class="btn-carrito" onclick="abrirCarrito()">
         🛒 Cotizar
         <span class="carrito-numero" id="carritoNumero"></span>
       </button>
-
+ 
       <button class="hamburguesa" onclick="toggleMenu()" id="btnHamburguesa">
         ☰
       </button>
-
+ 
     </div>
   </nav>
-
-
+ 
+ 
   <section id="inicio" class="hero">
-
+ 
     <div class="hero-fondo"></div>
-
+ 
+    <!-- ===== PARRILLA ANIMADA - FONDO PERMANENTE DEL HERO ===== -->
+    <div class="hero-parrilla-fondo" aria-hidden="true">
+ 
+      <!-- Brasas / llamas que suben desde abajo -->
+      <div class="brasas">
+        <span class="brasa b1"></span>
+        <span class="brasa b2"></span>
+        <span class="brasa b3"></span>
+        <span class="brasa b4"></span>
+        <span class="brasa b5"></span>
+        <span class="brasa b6"></span>
+      </div>
+ 
+      <!-- SVG: carne + barras de parrilla -->
+      <svg class="svg-parrilla-hero" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+ 
+        <!-- Sombra difusa debajo -->
+        <ellipse cx="250" cy="258" rx="118" ry="16" fill="rgba(0,0,0,0.28)" />
+ 
+        <!-- Carne -->
+        <g class="carne-grupo">
+          <ellipse cx="250" cy="210" rx="115" ry="55" fill="#8B2500" />
+          <ellipse cx="250" cy="202" rx="109" ry="49" fill="#A0320A" />
+          <!-- Marmoleado -->
+          <path d="M185 195 Q210 178 232 196 Q254 212 225 220 Q200 225 185 210 Z" fill="#B84010" opacity="0.65"/>
+          <path d="M258 183 Q285 174 298 192 Q308 210 288 216 Q270 220 258 204 Z" fill="#B84010" opacity="0.55"/>
+          <path d="M215 215 Q235 208 248 220 Q240 230 220 228 Z" fill="#C05020" opacity="0.45"/>
+          <!-- Grasa en los bordes -->
+          <path d="M136 210 Q145 195 166 191 Q156 210 154 228 Q142 224 136 210 Z" fill="#D4956A" opacity="0.9"/>
+          <path d="M364 210 Q355 195 334 193 Q344 212 342 230 Q355 226 364 210 Z" fill="#D4956A" opacity="0.9"/>
+          <!-- Marcas de parrilla en la carne -->
+          <line x1="178" y1="182" x2="168" y2="238" stroke="#5a1500" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+          <line x1="215" y1="172" x2="205" y2="236" stroke="#5a1500" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+          <line x1="254" y1="166" x2="244" y2="234" stroke="#5a1500" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+          <line x1="293" y1="172" x2="283" y2="236" stroke="#5a1500" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+          <line x1="330" y1="182" x2="320" y2="236" stroke="#5a1500" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+          <!-- Brillo superior -->
+          <ellipse cx="228" cy="193" rx="40" ry="14" fill="rgba(255,180,80,0.12)" />
+        </g>
+ 
+        <!-- Barras de la parrilla (sobre la carne) -->
+        <g opacity="0.92">
+          <rect x="120" y="238" width="260" height="9"   rx="4.5" fill="#1e1005" />
+          <rect x="120" y="222" width="260" height="9"   rx="4.5" fill="#1e1005" />
+          <rect x="120" y="206" width="260" height="9"   rx="4.5" fill="#1e1005" />
+          <rect x="120" y="190" width="260" height="9"   rx="4.5" fill="#1e1005" />
+          <rect x="120" y="174" width="260" height="9"   rx="4.5" fill="#1e1005" />
+          <!-- Resplandor dorado en cada barra -->
+          <rect x="120" y="238" width="260" height="2.5" rx="1.2" fill="#c8972a" opacity="0.45"/>
+          <rect x="120" y="222" width="260" height="2.5" rx="1.2" fill="#c8972a" opacity="0.45"/>
+          <rect x="120" y="206" width="260" height="2.5" rx="1.2" fill="#c8972a" opacity="0.45"/>
+          <rect x="120" y="190" width="260" height="2.5" rx="1.2" fill="#c8972a" opacity="0.45"/>
+          <rect x="120" y="174" width="260" height="2.5" rx="1.2" fill="#c8972a" opacity="0.45"/>
+        </g>
+ 
+        <!-- Chispas -->
+        <circle class="chispa c1" cx="185" cy="162" r="4"   fill="#ff9900"/>
+        <circle class="chispa c2" cx="260" cy="148" r="3.5" fill="#ffcc00"/>
+        <circle class="chispa c3" cx="225" cy="138" r="3"   fill="#ff6600"/>
+        <circle class="chispa c4" cx="305" cy="158" r="4"   fill="#ff9900"/>
+        <circle class="chispa c5" cx="200" cy="128" r="3"   fill="#ffcc00"/>
+        <circle class="chispa c6" cx="285" cy="136" r="3.5" fill="#ff6600"/>
+        <circle class="chispa c7" cx="244" cy="120" r="2.5" fill="#ffdd44"/>
+        <circle class="chispa c8" cx="320" cy="145" r="3"   fill="#ff8800"/>
+ 
+      </svg>
+ 
+      <!-- Humo -->
+      <div class="humo-container">
+        <div class="humo h1"></div>
+        <div class="humo h2"></div>
+        <div class="humo h3"></div>
+        <div class="humo h4"></div>
+        <div class="humo h5"></div>
+      </div>
+ 
+    </div>
+    <!-- ===== FIN PARRILLA ANIMADA ===== -->
+ 
     <div class="hero-contenido">
-
+ 
       <h1>La mejor <span>carne de res</span><br>en Colombia</h1>
       <p>Distribución directa desde el frigorífico hasta su mesa.<br>Calidad garantizada y los mejores precios.<br><strong><em>"Calidad que se corta, Sabor que se siente."</em></strong></p>
-
+ 
       <div class="hero-botones">
         <a href="#productos" class="btn-dorado">Ver Productos</a>
         <a href="#nosotros"  class="btn-borde">Quiénes Somos</a>
       </div>
-
+ 
     </div>
-
+ 
     <div class="bajar">↓</div>
-
+ 
   </section>
-
-
+ 
+ 
   <section id="servicios" class="seccion fondo-oscuro">
     <div class="contenedor">
-
+ 
       <div class="titulo-seccion">
         <p class="etiqueta">Lo que ofrecemos</p>
         <h2>Nuestros <span>Servicios</span></h2>
         <div class="linea-dorada"></div>
       </div>
-
+ 
       <div class="grid-4">
-
+ 
         <div class="tarjeta-servicio">
           <div class="icono-servicio">🏆</div>
           <h3>Quiénes Somos</h3>
           <p>Empresa colombiana que trabaja con ganaderos certificados para traerle la mejor carne.</p>
         </div>
-
+ 
         <div class="tarjeta-servicio">
           <div class="icono-servicio">⚙️</div>
           <h3>Qué Hacemos</h3>
           <p>Seleccionamos, procesamos y distribuimos cortes de res de primera calidad para familias, restaurantes y empresas.</p>
         </div>
-
+ 
         <div class="tarjeta-servicio">
           <div class="icono-servicio">🥩</div>
           <h3>Nuestros Productos</h3>
           <p>Lomo fino, Punta de anca, Costilla, Bife, Sobrebarriga y más. Frescos, seleccionados y con cadena de frío garantizada.</p>
         </div>
-
+ 
         <div class="tarjeta-servicio">
           <div class="icono-servicio">📞</div>
           <h3>Contacto Directo</h3>
           <p>Atención por WhatsApp y teléfono. Cotizaciones inmediatas y entrega a domicilio en el área metropolitana.</p>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
-
+ 
+ 
   <section id="nosotros" class="seccion">
     <div class="contenedor">
-
+ 
       <div class="titulo-seccion">
         <p class="etiqueta">Nuestra historia</p>
         <h2>¿Quiénes <span>Somos</span>?</h2>
         <div class="linea-dorada"></div>
       </div>
-
+ 
       <div class="nosotros-grid">
-
+ 
         <div class="nosotros-imagen">
           <div class="imagen-carne">
             <span class="emoji-carne">🥩</span>
@@ -139,7 +218,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="nosotros-texto">
           <h3>Tradición y calidad en cada <span>corte</span></h3>
           <p>
@@ -151,7 +230,7 @@
             Nuestro proceso incluye selección rigurosa del ganado, procesamiento en
             frigoríficos certificados y distribución con cadena de frío hasta su mesa.
           </p>
-
+ 
           <ul class="lista-puntos">
             <li>Ganado de razas premium (Angus, Brahman)</li>
             <li>Certificación INVIMA en todos nuestros frigoríficos</li>
@@ -160,33 +239,33 @@
             <li>Cortes personalizados según su necesidad</li>
             <li>Facturación electrónica — cumple normativa colombiana</li>
           </ul>
-
+ 
           <a href="#contacto" class="btn-dorado">Contáctenos</a>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
-
+ 
+ 
   <section id="productos" class="seccion fondo-oscuro">
     <div class="contenedor">
-
+ 
       <div class="titulo-seccion">
         <p class="etiqueta">Catálogo</p>
         <h2>Nuestros <span>Productos</span></h2>
         <div class="linea-dorada"></div>
       </div>
-
+ 
       <div class="grid-productos" id="gridProductos"></div>
-
+ 
     </div>
   </section>
-
-
+ 
+ 
   <section id="precios" class="seccion">
     <div class="contenedor">
-
+ 
       <div class="titulo-seccion">
         <p class="etiqueta">Tarifas</p>
         <h2>Precios <span>por Kilogramo</span></h2>
@@ -195,7 +274,7 @@
           Precios en pesos colombianos (COP). A mayor cantidad, mejor precio.
         </p>
       </div>
-
+ 
       <div class="tabla-scroll">
         <table class="tabla-precios">
           <thead>
@@ -211,26 +290,26 @@
           <tbody id="cuerpoTabla"></tbody>
         </table>
       </div>
-
+ 
     </div>
   </section>
-
-
+ 
+ 
   <section id="contacto" class="seccion fondo-oscuro">
     <div class="contenedor">
-
+ 
       <div class="titulo-seccion">
         <p class="etiqueta">Escríbenos</p>
         <h2>Póngase en <span>Contacto</span></h2>
         <div class="linea-dorada"></div>
       </div>
-
+ 
       <div class="contacto-grid">
-
+ 
         <div class="contacto-info">
           <h3>Estamos listos para atenderle</h3>
           <p>Comuníquese con nosotros para pedir cotización o hacer su pedido. Respondemos en menos de 2 horas.</p>
-
+ 
           <div class="dato-contacto">
             <span class="dato-icono">📍</span>
             <div>
@@ -238,7 +317,7 @@
               <p>Cra 15 #28-45, Bogotá D.C., Colombia</p>
             </div>
           </div>
-
+ 
           <div class="dato-contacto">
             <span class="dato-icono">📱</span>
             <div>
@@ -246,7 +325,7 @@
               <p>+57 319 361 9999</p>
             </div>
           </div>
-
+ 
           <div class="dato-contacto">
             <span class="dato-icono">📧</span>
             <div>
@@ -254,7 +333,7 @@
               <p>emersonjara2001@gmail.com</p>
             </div>
           </div>
-
+ 
           <div class="dato-contacto">
             <span class="dato-icono">🕐</span>
             <div>
@@ -262,7 +341,7 @@
               <p>Lunes a Sábado: 6:00 AM – 6:00 PM</p>
             </div>
           </div>
-
+ 
           <a href="https://wa.me/573193619999?text=Hola,%20quiero%20cotizar%20productos%20de%20Arenja%20Premium"
              target="_blank"
              class="btn-whatsapp"
@@ -270,25 +349,25 @@
             💬 Chatear por WhatsApp
           </a>
         </div>
-
+ 
         <div class="contacto-formulario">
           <h3>Solicitar Cotización</h3>
-
+ 
           <div class="campo">
             <label>Nombre completo *</label>
             <input type="text" id="nombre" placeholder="Ej: Juan García">
           </div>
-
+ 
           <div class="campo">
             <label>Teléfono / WhatsApp *</label>
             <input type="tel" id="telefono" placeholder="+57 300 000 0000">
           </div>
-
+ 
           <div class="campo">
             <label>Correo electrónico</label>
             <input type="email" id="correo" placeholder="su@correo.com">
           </div>
-
+ 
           <div class="campo">
             <label>Tipo de cliente</label>
             <select id="tipoCliente">
@@ -299,26 +378,26 @@
               <option>Empresa</option>
             </select>
           </div>
-
+ 
           <div class="campo">
             <label>¿Qué necesita?</label>
             <textarea id="mensaje" placeholder="Cuéntenos qué cortes y cantidades necesita..." rows="4"></textarea>
           </div>
-
+ 
           <button class="btn-whatsapp" onclick="enviarFormulario()">
             💬 Enviar por WhatsApp
           </button>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
-
+ 
+ 
   <footer>
     <div class="contenedor">
       <div class="footer-grid">
-
+ 
         <div class="footer-marca">
           <div class="logo" style="margin-bottom: 12px;">
             <img src="logo Arenja.png" alt="Arenja Premium" class="logo-img">
@@ -326,7 +405,7 @@
           </div>
           <p>Distribución de carnes de res premium en Colombia. Calidad y frescura garantizadas.</p>
         </div>
-
+ 
         <div class="footer-links">
           <h4>Navegación</h4>
           <ul>
@@ -337,7 +416,7 @@
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-
+ 
         <div class="footer-links">
           <h4>Legal</h4>
           <ul>
@@ -347,25 +426,25 @@
             <li><a href="https://www.invima.gov.co/consulta-registros-sanitarios">Registro INVIMA</a></li>
           </ul>
         </div>
-
+ 
       </div>
-
+ 
       <div class="footer-fondo">
         <p>© 2025 Arenja Premium S.A.S. · Bogotá, Colombia</p>
       </div>
     </div>
   </footer>
-
-
+ 
+ 
   <div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
-
+ 
   <div class="panel-carrito" id="panelCarrito">
-
+ 
     <div class="carrito-header">
       <h3>🛒 Mi Cotización</h3>
       <button onclick="cerrarCarrito()">✕</button>
     </div>
-
+ 
     <div class="carrito-lista" id="carritoLista">
       <div class="carrito-vacio" id="carritoVacio">
         <p>🥩</p>
@@ -373,7 +452,7 @@
         <small>Agrega productos para cotizar</small>
       </div>
     </div>
-
+ 
     <div class="carrito-pie" id="carritoPie" style="display: none;">
       <div class="carrito-total">
         <span>Total estimado:</span>
@@ -386,14 +465,15 @@
         * Cotización estimada. Un asesor confirmará los precios finales.
       </small>
     </div>
-
+ 
   </div>
-
-
+ 
+ 
   <div class="notificacion" id="notificacion">✅ Producto agregado</div>
-
-
+ 
+ 
   <script src="JS/app.js"></script>
-
+ 
 </body>
 </html>
+ 

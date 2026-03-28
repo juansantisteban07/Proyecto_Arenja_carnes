@@ -1,8 +1,5 @@
 // ====================================================
 // 1. DATOS DE PRODUCTOS
-// ↓ CAMBIO: se reemplazó el campo "emoji" por "imagen"
-//   Coloca las fotos en una carpeta "img/" dentro del proyecto
-//   y asegúrate de que los nombres coincidan exactamente.
 // ====================================================
 
 const productos = [
@@ -206,7 +203,6 @@ function actualizarKg(productoId, nuevoValor) {
 
 // ====================================================
 // 10. CARRITO - DIBUJAR (RENDERIZAR)
-// ↓ CAMBIO: el ícono del item ahora usa <img> en lugar de emoji
 // ====================================================
 
 function dibujarCarrito() {

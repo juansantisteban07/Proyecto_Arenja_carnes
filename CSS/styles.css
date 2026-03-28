@@ -1,40 +1,40 @@
 /*
   ARENJA PREMIUM - Estilos CSS
   Proyecto: Distribución de carnes de res
-
+ 
   COLORES:
-    Azul oscuro:  #0a1628 - pedidor por el cliente
+    Azul oscuro:  #0a1628 - pedido por el cliente
     Azul medio:   #102040
     Dorado:       #c8972a
     Blanco:       #ffffff
-
+ 
   TIPOGRAFIAS:
     Playfair Display → titulos
     Poppins          → texto normal
 */
-
-
+ 
+ 
 /* ==========================================
    ESTILOS GENERALES
 ========================================== */
-
+ 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0a1628;
   color: #ffffff;
   overflow-x: hidden;
 }
-
+ 
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -45,12 +45,12 @@ body {
   background: #c8972a;
   border-radius: 3px;
 }
-
-
+ 
+ 
 /* ==========================================
    NAVBAR
 ========================================== */
-
+ 
 #navbar {
   position: fixed;
   top: 0;
@@ -60,12 +60,12 @@ body {
   padding: 15px 20px;
   transition: background 0.3s;
 }
-
+ 
 #navbar.scrolled {
   background-color: rgba(10, 22, 40, 0.95);
   border-bottom: 1px solid rgba(200, 151, 42, 0.3);
 }
-
+ 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -74,30 +74,30 @@ body {
   justify-content: space-between;
   gap: 20px;
 }
-
+ 
 .logo-img {
   width: 70px;
   height: 70px;
   object-fit: contain;
   border-radius: 10px;
 }
-
+ 
 .logo-texto {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   color: white;
 }
-
+ 
 .logo-texto strong {
   color: #c8972a;
 }
-
+ 
 .menu {
   display: flex;
   list-style: none;
   gap: 25px;
 }
-
+ 
 .menu a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
@@ -105,11 +105,11 @@ body {
   font-weight: 400;
   transition: color 0.3s;
 }
-
+ 
 .menu a:hover {
   color: #c8972a;
 }
-
+ 
 .btn-carrito {
   position: relative;
   background-color: #c8972a;
@@ -123,11 +123,11 @@ body {
   transition: background 0.3s;
   font-family: 'Poppins', sans-serif;
 }
-
+ 
 .btn-carrito:hover {
   background-color: #e8b84b;
 }
-
+ 
 .carrito-numero {
   position: absolute;
   top: -6px;
@@ -143,7 +143,7 @@ body {
   justify-content: center;
   font-weight: 700;
 }
-
+ 
 .hamburguesa {
   display: none;
   background: none;
@@ -152,12 +152,12 @@ body {
   font-size: 1.6rem;
   cursor: pointer;
 }
-
-
+ 
+ 
 /* ==========================================
    HERO
 ========================================== */
-
+ 
 .hero {
   min-height: 100vh;
   position: relative;
@@ -167,7 +167,7 @@ body {
   text-align: center;
   overflow: hidden;
 }
-
+ 
 .hero-fondo {
   position: absolute;
   inset: 0;
@@ -188,24 +188,24 @@ body {
       rgba(200, 151, 42, 0.08) 40px
     );
 }
-
+ 
 .hero-contenido {
   position: relative;
   z-index: 2;
   padding: 20px;
   max-width: 700px;
 }
-
+ 
 .hero-logo {
   margin-bottom: 20px;
   animation: flotar 3s ease-in-out infinite;
 }
-
+ 
 @keyframes flotar {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
 }
-
+ 
 .hero-contenido h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 6vw, 4rem);
@@ -213,25 +213,25 @@ body {
   line-height: 1.15;
   margin-bottom: 15px;
 }
-
+ 
 .hero-contenido h1 span {
   color: #c8972a;
 }
-
+ 
 .hero-contenido p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 30px;
   line-height: 1.7;
 }
-
+ 
 .hero-botones {
   display: flex;
   gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
 }
-
+ 
 .bajar {
   position: absolute;
   bottom: 25px;
@@ -240,18 +240,19 @@ body {
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.4);
   animation: bajar 1.5s ease-in-out infinite;
+  z-index: 2;
 }
-
+ 
 @keyframes bajar {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50%       { transform: translateX(-50%) translateY(8px); }
 }
-
-
+ 
+ 
 /* ==========================================
    BOTONES
 ========================================== */
-
+ 
 .btn-dorado {
   background-color: #c8972a;
   color: #0a1628;
@@ -266,12 +267,12 @@ body {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
 }
-
+ 
 .btn-dorado:hover {
   background-color: #e8b84b;
   transform: translateY(-2px);
 }
-
+ 
 .btn-borde {
   border: 2px solid rgba(255, 255, 255, 0.5);
   color: white;
@@ -284,12 +285,12 @@ body {
   background: transparent;
   display: inline-block;
 }
-
+ 
 .btn-borde:hover {
   border-color: #c8972a;
   color: #c8972a;
 }
-
+ 
 .btn-whatsapp {
   background-color: #25d366;
   color: white;
@@ -306,35 +307,35 @@ body {
   text-align: center;
   justify-content: center;
 }
-
+ 
 .btn-whatsapp:hover {
   background-color: #1db954;
   transform: translateY(-2px);
 }
-
-
+ 
+ 
 /* ==========================================
    ESTRUCTURA DE SECCIONES
 ========================================== */
-
+ 
 .seccion {
   padding: 70px 20px;
 }
-
+ 
 .fondo-oscuro {
   background-color: #102040;
 }
-
+ 
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+ 
 .titulo-seccion {
   text-align: center;
   margin-bottom: 50px;
 }
-
+ 
 .etiqueta {
   color: #c8972a;
   font-size: 0.8rem;
@@ -343,17 +344,17 @@ body {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
-
+ 
 .titulo-seccion h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.7rem, 4vw, 2.5rem);
   font-weight: 700;
 }
-
+ 
 .titulo-seccion h2 span {
   color: #c8972a;
 }
-
+ 
 .linea-dorada {
   width: 55px;
   height: 3px;
@@ -361,18 +362,18 @@ body {
   margin: 12px auto 0;
   border-radius: 2px;
 }
-
-
+ 
+ 
 /* ==========================================
    SERVICIOS
 ========================================== */
-
+ 
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
+ 
 .tarjeta-servicio {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -381,12 +382,12 @@ body {
   text-align: center;
   transition: transform 0.3s, border-color 0.3s;
 }
-
+ 
 .tarjeta-servicio:hover {
   transform: translateY(-5px);
   border-color: rgba(200, 151, 42, 0.4);
 }
-
+ 
 .icono-servicio {
   font-size: 2.2rem;
   width: 65px;
@@ -399,7 +400,7 @@ body {
   margin: 0 auto 15px;
   border: 1px solid rgba(200, 151, 42, 0.25);
 }
-
+ 
 .tarjeta-servicio h3 {
   font-size: 1rem;
   font-weight: 600;
@@ -408,25 +409,25 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
+ 
 .tarjeta-servicio p {
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
 }
-
-
+ 
+ 
 /* ==========================================
    NOSOTROS
 ========================================== */
-
+ 
 .nosotros-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
 }
-
+ 
 .imagen-carne {
   background: linear-gradient(135deg, #102040, #1a3a6b);
   border-radius: 16px;
@@ -435,26 +436,26 @@ body {
   border: 1px solid rgba(200, 151, 42, 0.2);
   margin-bottom: 20px;
 }
-
+ 
 .emoji-carne {
   font-size: 5rem;
   display: block;
   margin-bottom: 10px;
 }
-
+ 
 .imagen-carne p {
   color: #c8972a;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 2px;
 }
-
+ 
 .estadisticas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-
+ 
 .stat {
   background-color: rgba(200, 151, 42, 0.1);
   border: 1px solid rgba(200, 151, 42, 0.25);
@@ -462,44 +463,44 @@ body {
   padding: 16px;
   text-align: center;
 }
-
+ 
 .stat strong {
   display: block;
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   color: #c8972a;
 }
-
+ 
 .stat span {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
+ 
 .nosotros-texto h3 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   margin-bottom: 15px;
   line-height: 1.3;
 }
-
+ 
 .nosotros-texto h3 span {
   color: #c8972a;
 }
-
+ 
 .nosotros-texto p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
   margin-bottom: 12px;
   font-size: 0.95rem;
 }
-
+ 
 .lista-puntos {
   list-style: none;
   margin: 20px 0 25px;
 }
-
+ 
 .lista-puntos li {
   padding: 7px 0;
   font-size: 0.9rem;
@@ -508,7 +509,7 @@ body {
   padding-left: 18px;
   position: relative;
 }
-
+ 
 .lista-puntos li::before {
   content: '';
   position: absolute;
@@ -520,19 +521,19 @@ body {
   background-color: #c8972a;
   border-radius: 50%;
 }
-
-
+ 
+ 
 /* ==========================================
    PRODUCTOS
    ↓ CAMBIO: se agrega .producto-foto
 ========================================== */
-
+ 
 .grid-productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
-
+ 
 .tarjeta-producto {
   background-color: #0a1628;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -540,13 +541,13 @@ body {
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
+ 
 .tarjeta-producto:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   border-color: rgba(200, 151, 42, 0.3);
 }
-
+ 
 .producto-imagen {
   height: 180px;
   background: linear-gradient(135deg, #0f1e35, #1a3a6b);
@@ -557,8 +558,8 @@ body {
   position: relative;
   overflow: hidden;
 }
-
-/* ── NUEVO: la imagen real ocupa todo el área ── */
+ 
+/* ── la imagen real ocupa todo el área ── */
 .producto-foto {
   width: 100%;
   height: 100%;
@@ -566,7 +567,7 @@ body {
   object-position: center;
   display: block;
 }
-
+ 
 .producto-etiqueta {
   position: absolute;
   top: 12px;
@@ -579,11 +580,11 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
-
+ 
 .producto-cuerpo {
   padding: 18px;
 }
-
+ 
 .producto-nombre {
   font-size: 1.1rem;
   font-weight: 600;
@@ -591,7 +592,7 @@ body {
   letter-spacing: 0.5px;
   margin-bottom: 4px;
 }
-
+ 
 .producto-tipo {
   font-size: 0.75rem;
   color: #c8972a;
@@ -599,33 +600,33 @@ body {
   letter-spacing: 1.5px;
   margin-bottom: 10px;
 }
-
+ 
 .producto-descripcion {
   font-size: 0.83rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.6;
   margin-bottom: 15px;
 }
-
+ 
 .producto-pie {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
-
+ 
 .producto-precio strong {
   display: block;
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   color: #c8972a;
 }
-
+ 
 .producto-precio small {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.45);
 }
-
+ 
 .btn-agregar {
   background: linear-gradient(135deg, #1a3a6b, #2563b0);
   color: white;
@@ -639,29 +640,29 @@ body {
   font-family: 'Poppins', sans-serif;
   white-space: nowrap;
 }
-
+ 
 .btn-agregar:hover {
   background: linear-gradient(135deg, #2563b0, #3b82f6);
   transform: scale(1.04);
 }
-
-
+ 
+ 
 /* ==========================================
    TABLA DE PRECIOS
 ========================================== */
-
+ 
 .tabla-scroll {
   overflow-x: auto;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
-
+ 
 .tabla-precios {
   width: 100%;
   border-collapse: collapse;
   min-width: 580px;
 }
-
+ 
 .tabla-precios th {
   background-color: rgba(200, 151, 42, 0.12);
   color: #e8b84b;
@@ -672,28 +673,28 @@ body {
   text-transform: uppercase;
   border-bottom: 2px solid rgba(200, 151, 42, 0.25);
 }
-
+ 
 .tabla-precios td {
   padding: 12px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.8);
 }
-
+ 
 .tabla-precios tr:last-child td {
   border-bottom: none;
 }
-
+ 
 .tabla-precios tr:hover td {
   background-color: rgba(255, 255, 255, 0.03);
 }
-
+ 
 .tabla-precios td.precio {
   color: #c8972a;
   font-weight: 600;
   font-size: 0.95rem;
 }
-
+ 
 .badge {
   display: inline-block;
   padding: 3px 10px;
@@ -703,37 +704,37 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-
+ 
 .badge-premium   { background: rgba(200,151,42,0.2);  color: #e8b84b; }
 .badge-estandar  { background: rgba(100,130,200,0.2); color: #93c5fd; }
 .badge-economico { background: rgba(100,200,150,0.2); color: #6ee7b7; }
-
-
+ 
+ 
 /* ==========================================
    CONTACTO
 ========================================== */
-
+ 
 .contacto-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
 }
-
+ 
 .contacto-info h3,
 .contacto-formulario h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   margin-bottom: 12px;
 }
-
+ 
 .contacto-info > p {
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.8;
   margin-bottom: 25px;
   font-size: 0.92rem;
 }
-
+ 
 .dato-contacto {
   display: flex;
   align-items: center;
@@ -744,12 +745,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
   margin-bottom: 10px;
 }
-
+ 
 .dato-icono {
   font-size: 1.3rem;
   flex-shrink: 0;
 }
-
+ 
 .dato-contacto strong {
   display: block;
   font-size: 0.75rem;
@@ -758,24 +759,24 @@ body {
   color: #c8972a;
   margin-bottom: 2px;
 }
-
+ 
 .dato-contacto p {
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
-
+ 
 .contacto-formulario {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 28px;
 }
-
+ 
 .campo {
   margin-bottom: 16px;
 }
-
+ 
 .campo label {
   display: block;
   font-size: 0.78rem;
@@ -785,7 +786,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 6px;
 }
-
+ 
 .campo input,
 .campo select,
 .campo textarea {
@@ -800,39 +801,39 @@ body {
   outline: none;
   transition: border-color 0.3s;
 }
-
+ 
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus {
   border-color: #c8972a;
 }
-
+ 
 .campo select option {
   background-color: #102040;
 }
-
+ 
 .campo textarea {
   resize: vertical;
 }
-
-
+ 
+ 
 /* ==========================================
    FOOTER
 ========================================== */
-
+ 
 footer {
   background-color: #050e1a;
   padding: 40px 20px 20px;
   border-top: 1px solid rgba(200, 151, 42, 0.2);
 }
-
+ 
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
 }
-
+ 
 .footer-marca p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
@@ -840,7 +841,7 @@ footer {
   margin-top: 10px;
   max-width: 260px;
 }
-
+ 
 .footer-links h4 {
   font-size: 0.85rem;
   letter-spacing: 1.5px;
@@ -848,42 +849,42 @@ footer {
   color: #c8972a;
   margin-bottom: 14px;
 }
-
+ 
 .footer-links ul {
   list-style: none;
 }
-
+ 
 .footer-links li {
   margin-bottom: 8px;
 }
-
+ 
 .footer-links a {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   font-size: 0.85rem;
   transition: color 0.3s;
 }
-
+ 
 .footer-links a:hover {
   color: #c8972a;
 }
-
+ 
 .footer-fondo {
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
 }
-
+ 
 .footer-fondo p {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.3);
 }
-
-
+ 
+ 
 /* ==========================================
    CARRITO
 ========================================== */
-
+ 
 .overlay {
   position: fixed;
   inset: 0;
@@ -893,12 +894,12 @@ footer {
   pointer-events: none;
   transition: opacity 0.3s;
 }
-
+ 
 .overlay.activo {
   opacity: 1;
   pointer-events: all;
 }
-
+ 
 .panel-carrito {
   position: fixed;
   top: 0;
@@ -914,11 +915,11 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
+ 
 .panel-carrito.abierto {
   transform: translateX(0);
 }
-
+ 
 .carrito-header {
   padding: 18px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -926,12 +927,12 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-
+ 
 .carrito-header h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
 }
-
+ 
 .carrito-header button {
   background-color: rgba(255, 255, 255, 0.08);
   border: none;
@@ -943,35 +944,35 @@ footer {
   font-size: 1rem;
   transition: background 0.3s;
 }
-
+ 
 .carrito-header button:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
+ 
 .carrito-lista {
   flex: 1;
   overflow-y: auto;
   padding: 18px;
 }
-
+ 
 .carrito-vacio {
   text-align: center;
   color: rgba(255, 255, 255, 0.4);
   padding: 50px 20px;
 }
-
+ 
 .carrito-vacio p:first-child {
   font-size: 2.5rem;
   margin-bottom: 8px;
 }
-
+ 
 .carrito-vacio small {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.3);
   display: block;
   margin-top: 5px;
 }
-
+ 
 .item-carrito {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -982,34 +983,34 @@ footer {
   gap: 10px;
   align-items: flex-start;
 }
-
+ 
 .item-emoji {
   font-size: 1.8rem;
   flex-shrink: 0;
 }
-
+ 
 .item-info {
   flex: 1;
 }
-
+ 
 .item-nombre {
   font-size: 0.88rem;
   font-weight: 600;
   margin-bottom: 3px;
 }
-
+ 
 .item-tipo {
   font-size: 0.72rem;
   color: #c8972a;
   margin-bottom: 8px;
 }
-
+ 
 .item-controles {
   display: flex;
   align-items: center;
   gap: 7px;
 }
-
+ 
 .btn-cantidad {
   width: 26px;
   height: 26px;
@@ -1024,12 +1025,12 @@ footer {
   justify-content: center;
   transition: all 0.2s;
 }
-
+ 
 .btn-cantidad:hover {
   border-color: #c8972a;
   color: #c8972a;
 }
-
+ 
 .input-kg {
   width: 55px;
   background-color: rgba(255, 255, 255, 0.08);
@@ -1042,31 +1043,31 @@ footer {
   font-family: 'Poppins', sans-serif;
   outline: none;
 }
-
+ 
 .texto-kg {
   font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.5);
 }
-
+ 
 .item-derecha {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
 }
-
+ 
 .item-precio {
   font-family: 'Playfair Display', serif;
   font-size: 0.95rem;
   color: #c8972a;
   font-weight: 700;
 }
-
+ 
 .item-precio-kg {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.4);
 }
-
+ 
 .btn-eliminar {
   background: none;
   border: none;
@@ -1076,16 +1077,16 @@ footer {
   padding: 2px;
   transition: color 0.3s;
 }
-
+ 
 .btn-eliminar:hover {
   color: #ff6b6b;
 }
-
+ 
 .carrito-pie {
   padding: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-
+ 
 .carrito-total {
   display: flex;
   justify-content: space-between;
@@ -1094,19 +1095,19 @@ footer {
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-
+ 
 .carrito-total span {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
+ 
 .carrito-total strong {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   color: #c8972a;
 }
-
+ 
 .nota-carrito {
   display: block;
   font-size: 0.73rem;
@@ -1115,12 +1116,12 @@ footer {
   margin-top: 10px;
   line-height: 1.5;
 }
-
-
+ 
+ 
 /* ==========================================
    NOTIFICACIÓN FLOTANTE
 ========================================== */
-
+ 
 .notificacion {
   position: fixed;
   bottom: 25px;
@@ -1137,16 +1138,16 @@ footer {
   pointer-events: none;
   white-space: nowrap;
 }
-
+ 
 .notificacion.visible {
   transform: translateX(-50%) translateY(0);
 }
-
-
+ 
+ 
 /* ==========================================
    RESPONSIVE
 ========================================== */
-
+ 
 @media (max-width: 1024px) {
   .grid-4          { grid-template-columns: repeat(2, 1fr); }
   .grid-productos  { grid-template-columns: repeat(2, 1fr); }
@@ -1154,9 +1155,9 @@ footer {
   .contacto-grid   { grid-template-columns: 1fr; }
   .footer-grid     { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 @media (max-width: 768px) {
-
+ 
   .menu {
     display: none;
     flex-direction: column;
@@ -1169,25 +1170,168 @@ footer {
     gap: 15px;
     border-bottom: 1px solid rgba(200, 151, 42, 0.2);
   }
-
+ 
   .menu.abierto {
     display: flex;
   }
-
+ 
   .hamburguesa    { display: block; }
   .nav-container  { position: relative; }
-
+ 
   .grid-4         { grid-template-columns: 1fr; }
   .grid-productos { grid-template-columns: 1fr; }
   .footer-grid    { grid-template-columns: 1fr; }
-
+ 
   .hero-botones   { flex-direction: column; align-items: center; }
-
+ 
   .panel-carrito  { width: 100vw; }
 }
-
+ 
 @media (max-width: 480px) {
   #navbar           { padding: 12px 15px; }
   .seccion          { padding: 50px 15px; }
   .hero-contenido   { padding: 15px; }
 }
+ 
+ 
+/* ==========================================
+   PARRILLA ANIMADA - FONDO PERMANENTE HERO
+   Posicionada detrás del título, siempre visible
+========================================== */
+ 
+/* Contenedor: ocupa todo el Hero */
+.hero-parrilla-fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;                    /* encima del fondo de cuadrícula, debajo del texto */
+  display: flex;
+  align-items: center;         /* la parrilla se apoya en la parte baja del hero */
+  justify-content: center;
+  pointer-events: none;          /* no interfiere con los clics */
+  overflow: hidden;
+}
+ 
+/* ── SVG de la carne + parrilla ── */
+ 
+.svg-parrilla-hero {
+  width: min(1500px, 250vw);       /* grande pero responsivo */
+  opacity: 0.40;                 /* sutil: se ve pero no compite con el título */
+  margin-bottom: -30px;          /* la baja un poco para que emerja desde el borde */
+  filter:
+    drop-shadow(0 0 40px rgba(200, 80, 0, 0.5))
+    drop-shadow(0 0 80px rgba(200, 80, 0, 0.25));
+  position: relative;
+  z-index: 2;
+}
+ 
+/* La carne vibra levemente simulando el calor */
+.carne-grupo {
+  animation: vibraCarne 0.22s ease-in-out infinite alternate;
+  transform-origin: 250px 210px;
+}
+ 
+@keyframes vibraCarne {
+  0%   { transform: translateY(0px)    scaleX(1);     }
+  100% { transform: translateY(-2px)   scaleX(1.008); }
+}
+ 
+/* ── Chispas ── */
+ 
+.chispa {
+  animation: volarChispa ease-out infinite;
+}
+ 
+.c1 { animation-duration: 1.2s; animation-delay: 0s;    }
+.c2 { animation-duration: 1.0s; animation-delay: 0.3s;  }
+.c3 { animation-duration: 1.4s; animation-delay: 0.55s; }
+.c4 { animation-duration: 1.1s; animation-delay: 0.15s; }
+.c5 { animation-duration: 1.3s; animation-delay: 0.75s; }
+.c6 { animation-duration: 0.9s; animation-delay: 0.4s;  }
+.c7 { animation-duration: 1.5s; animation-delay: 0.9s;  }
+.c8 { animation-duration: 1.0s; animation-delay: 0.2s;  }
+ 
+@keyframes volarChispa {
+  0%   { transform: translate(0, 0)        scale(1);   opacity: 1;   }
+  50%  { transform: translate(8px, -28px)  scale(0.7); opacity: 0.7; }
+  100% { transform: translate(-5px, -58px) scale(0.1); opacity: 0;   }
+}
+ 
+/* ── Brasas / llamas que suben desde abajo ── */
+ 
+.brasas {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(400px, 80vw);
+  height: 70px;
+  z-index: 1;
+}
+ 
+.brasa {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(9px);
+  animation: subirBrasa linear infinite;
+}
+ 
+.b1 { width: 38px; height: 38px; background: #ff4400; left: 15%;  animation-duration: 2.2s; animation-delay: 0s;    }
+.b2 { width: 26px; height: 26px; background: #ff8800; left: 32%;  animation-duration: 1.8s; animation-delay: 0.35s; }
+.b3 { width: 44px; height: 44px; background: #ff5500; left: 48%;  animation-duration: 2.5s; animation-delay: 0.7s;  }
+.b4 { width: 22px; height: 22px; background: #ffaa00; left: 66%;  animation-duration: 2.0s; animation-delay: 0.2s;  }
+.b5 { width: 30px; height: 30px; background: #ff3300; left: 6%;   animation-duration: 2.1s; animation-delay: 1.1s;  }
+.b6 { width: 20px; height: 20px; background: #ffcc00; left: 78%;  animation-duration: 1.7s; animation-delay: 0.5s;  }
+ 
+@keyframes subirBrasa {
+  0%   { transform: translateY(0)     scale(1);   opacity: 0.85; }
+  60%  {                                           opacity: 0.4;  }
+  100% { transform: translateY(-65px) scale(0.2); opacity: 0;    }
+}
+ 
+/* ── Humo ── */
+ 
+.humo-container {
+  position: absolute;
+  bottom: 160px;                  /* justo encima de la parrilla */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, 85vw);
+  height: 120px;
+  pointer-events: none;
+  z-index: 3;
+}
+ 
+.humo {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(160,175,200,0.14) 0%, transparent 70%);
+  animation: subirHumo ease-out infinite;
+}
+ 
+.h1 { width: 70px;  height: 70px;  left: 25%; animation-duration: 3.2s; animation-delay: 0s;    }
+.h2 { width: 55px;  height: 55px;  left: 42%; animation-duration: 2.8s; animation-delay: 0.7s;  }
+.h3 { width: 80px;  height: 80px;  left: 35%; animation-duration: 3.6s; animation-delay: 1.3s;  }
+.h4 { width: 50px;  height: 50px;  left: 57%; animation-duration: 3.0s; animation-delay: 1.0s;  }
+.h5 { width: 60px;  height: 60px;  left: 15%; animation-duration: 2.6s; animation-delay: 0.4s;  }
+ 
+@keyframes subirHumo {
+  0%   { transform: translateY(0)      scale(0.4); opacity: 0;   }
+  20%  {                                            opacity: 0.5; }
+  70%  {                                            opacity: 0.2; }
+  100% { transform: translateY(-110px) scale(2.8); opacity: 0;   }
+}
+ 
+/* ── Resplandor naranja de brasas en el piso del hero ── */
+.hero-parrilla-fondo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(500px, 95vw);
+  height: 120px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(220, 100, 20, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+ 
